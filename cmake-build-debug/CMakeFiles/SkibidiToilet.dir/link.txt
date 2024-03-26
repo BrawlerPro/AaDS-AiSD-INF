@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o -o SkibidiToilet 
+/usr/bin/cc -g CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o -o SkibidiToilet 

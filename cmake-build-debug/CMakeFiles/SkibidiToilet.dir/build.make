@@ -69,63 +69,47 @@ include CMakeFiles/SkibidiToilet.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SkibidiToilet.dir/flags.make
 
-CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o: CMakeFiles/SkibidiToilet.dir/flags.make
-CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o: /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/queue_list.c
-CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o: CMakeFiles/SkibidiToilet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o -MF CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o.d -o CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o -c /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/queue_list.c
+CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o: CMakeFiles/SkibidiToilet.dir/flags.make
+CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o: /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/table.c
+CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o: CMakeFiles/SkibidiToilet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o -MF CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o.d -o CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o -c /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/table.c
 
-CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/queue_list.c > CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.i
+CMakeFiles/SkibidiToilet.dir/ALA3/table.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SkibidiToilet.dir/ALA3/table.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/table.c > CMakeFiles/SkibidiToilet.dir/ALA3/table.c.i
 
-CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/queue_list.c -o CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.s
+CMakeFiles/SkibidiToilet.dir/ALA3/table.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SkibidiToilet.dir/ALA3/table.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/table.c -o CMakeFiles/SkibidiToilet.dir/ALA3/table.c.s
 
-CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o: CMakeFiles/SkibidiToilet.dir/flags.make
-CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o: /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/functions.c
-CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o: CMakeFiles/SkibidiToilet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o -MF CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o.d -o CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o -c /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/functions.c
+CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o: CMakeFiles/SkibidiToilet.dir/flags.make
+CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o: /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3.c
+CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o: CMakeFiles/SkibidiToilet.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o -MF CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o.d -o CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o -c /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3.c
 
-CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/functions.c > CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.i
+CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3.c > CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.i
 
-CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/functions.c -o CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.s
-
-CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o: CMakeFiles/SkibidiToilet.dir/flags.make
-CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o: /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/AiSD2.c
-CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o: CMakeFiles/SkibidiToilet.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o -MF CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o.d -o CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o -c /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/AiSD2.c
-
-CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/AiSD2.c > CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.i
-
-CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA2/AiSD2.c -o CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.s
+CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3.c -o CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.s
 
 # Object files for target SkibidiToilet
 SkibidiToilet_OBJECTS = \
-"CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o" \
-"CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o" \
-"CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o"
+"CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o" \
+"CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o"
 
 # External object files for target SkibidiToilet
 SkibidiToilet_EXTERNAL_OBJECTS =
 
-SkibidiToilet: CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o
-SkibidiToilet: CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o
-SkibidiToilet: CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o
+SkibidiToilet: CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o
+SkibidiToilet: CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o
 SkibidiToilet: CMakeFiles/SkibidiToilet.dir/build.make
 SkibidiToilet: CMakeFiles/SkibidiToilet.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable SkibidiToilet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable SkibidiToilet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SkibidiToilet.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

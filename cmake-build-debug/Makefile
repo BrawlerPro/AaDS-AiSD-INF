@@ -129,77 +129,53 @@ SkibidiToilet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/build
 .PHONY : SkibidiToilet/fast
 
-ALA2/AiSD2.o: ALA2/AiSD2.c.o
-.PHONY : ALA2/AiSD2.o
+ALA3/AiSD3.o: ALA3/AiSD3.c.o
+.PHONY : ALA3/AiSD3.o
 
 # target to build an object file
-ALA2/AiSD2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.o
-.PHONY : ALA2/AiSD2.c.o
+ALA3/AiSD3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o
+.PHONY : ALA3/AiSD3.c.o
 
-ALA2/AiSD2.i: ALA2/AiSD2.c.i
-.PHONY : ALA2/AiSD2.i
+ALA3/AiSD3.i: ALA3/AiSD3.c.i
+.PHONY : ALA3/AiSD3.i
 
 # target to preprocess a source file
-ALA2/AiSD2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.i
-.PHONY : ALA2/AiSD2.c.i
+ALA3/AiSD3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.i
+.PHONY : ALA3/AiSD3.c.i
 
-ALA2/AiSD2.s: ALA2/AiSD2.c.s
-.PHONY : ALA2/AiSD2.s
+ALA3/AiSD3.s: ALA3/AiSD3.c.s
+.PHONY : ALA3/AiSD3.s
 
 # target to generate assembly for a file
-ALA2/AiSD2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/AiSD2.c.s
-.PHONY : ALA2/AiSD2.c.s
+ALA3/AiSD3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.s
+.PHONY : ALA3/AiSD3.c.s
 
-ALA2/functions.o: ALA2/functions.c.o
-.PHONY : ALA2/functions.o
+ALA3/table.o: ALA3/table.c.o
+.PHONY : ALA3/table.o
 
 # target to build an object file
-ALA2/functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.o
-.PHONY : ALA2/functions.c.o
+ALA3/table.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o
+.PHONY : ALA3/table.c.o
 
-ALA2/functions.i: ALA2/functions.c.i
-.PHONY : ALA2/functions.i
-
-# target to preprocess a source file
-ALA2/functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.i
-.PHONY : ALA2/functions.c.i
-
-ALA2/functions.s: ALA2/functions.c.s
-.PHONY : ALA2/functions.s
-
-# target to generate assembly for a file
-ALA2/functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/functions.c.s
-.PHONY : ALA2/functions.c.s
-
-ALA2/queue_list.o: ALA2/queue_list.c.o
-.PHONY : ALA2/queue_list.o
-
-# target to build an object file
-ALA2/queue_list.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.o
-.PHONY : ALA2/queue_list.c.o
-
-ALA2/queue_list.i: ALA2/queue_list.c.i
-.PHONY : ALA2/queue_list.i
+ALA3/table.i: ALA3/table.c.i
+.PHONY : ALA3/table.i
 
 # target to preprocess a source file
-ALA2/queue_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.i
-.PHONY : ALA2/queue_list.c.i
+ALA3/table.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/table.c.i
+.PHONY : ALA3/table.c.i
 
-ALA2/queue_list.s: ALA2/queue_list.c.s
-.PHONY : ALA2/queue_list.s
+ALA3/table.s: ALA3/table.c.s
+.PHONY : ALA3/table.s
 
 # target to generate assembly for a file
-ALA2/queue_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA2/queue_list.c.s
-.PHONY : ALA2/queue_list.c.s
+ALA3/table.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA3/table.c.s
+.PHONY : ALA3/table.c.s
 
 # Help Target
 help:
@@ -210,15 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SkibidiToilet"
-	@echo "... ALA2/AiSD2.o"
-	@echo "... ALA2/AiSD2.i"
-	@echo "... ALA2/AiSD2.s"
-	@echo "... ALA2/functions.o"
-	@echo "... ALA2/functions.i"
-	@echo "... ALA2/functions.s"
-	@echo "... ALA2/queue_list.o"
-	@echo "... ALA2/queue_list.i"
-	@echo "... ALA2/queue_list.s"
+	@echo "... ALA3/AiSD3.o"
+	@echo "... ALA3/AiSD3.i"
+	@echo "... ALA3/AiSD3.s"
+	@echo "... ALA3/table.o"
+	@echo "... ALA3/table.i"
+	@echo "... ALA3/table.s"
 .PHONY : help
 
 
