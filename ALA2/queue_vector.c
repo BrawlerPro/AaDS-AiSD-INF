@@ -6,6 +6,7 @@
 // Очередь Вектор
 typedef struct Queue {
     double *array;
+    int *angles;
     int capacity;
     int rear;
     int front;
@@ -18,7 +19,8 @@ Queue *createQueue() {
     if (!queue)
         return NULL;
     queue->array = (double *) malloc(INITIAL_CAPACITY * sizeof(double));
-    if (!queue->array) {
+    queue->angles = (int *) malloc(INITIAL_CAPACITY * sizeof(int));
+    if (!queue->array || !queue->angles) {
         free(queue);
         return NULL;
     }
@@ -33,24 +35,30 @@ int isEmpty(Queue *queue) {
 }
 
 // Добавление элемента в очередь
-int enqueue(Queue *queue, double item) {
+int enqueue(Queue *queue, double item, int angle) {
     if (queue->size == queue->capacity) return 1;
-    queue->array[queue->rear++] = item;
+    queue->array[queue->rear] = item;
+    queue->angles[queue->rear] = angle;
+    queue->rear++;
     queue->rear %= queue->capacity;
     queue->size++;
     return 0;
 }
 
 // Удаление элемента из очереди
-double dequeue(Queue *queue) {
-    double item = queue->array[queue->front++];
+int dequeue(Queue *queue, double *item, int *angle) {
+    if(isEmpty(queue)) return 1;
+    (*item) = queue->array[queue->front];
+    (*angle) = queue->angles[queue->front];
+    queue->front++;
     queue->front %= queue->capacity;
     queue->size--;
-    return item;
+    return 0;
 }
 
 //Распустить Очередь
 void disperseQueue(Queue *queue) {
     free(queue->array);
+    free(queue->angles);
     free(queue);
 }

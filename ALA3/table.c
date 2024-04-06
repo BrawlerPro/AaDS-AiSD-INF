@@ -24,15 +24,11 @@ typedef struct Table {
 Table *initTable(int m_size) {
     Table *table = (Table *) malloc(sizeof(Table));
 
-    if (table == NULL){
-        free(table);
-        return NULL;
-    }
+    if (table == NULL) return NULL;
 
     table->ks = (KeySpace *) malloc(m_size * sizeof(KeySpace));
 
     if (table->ks == NULL){
-        free(table->ks);
         free(table);
         return NULL;
     }
@@ -43,18 +39,20 @@ Table *initTable(int m_size) {
 }
 
 
+
 // Вставка нового элемента с проверками на уникальность ключей и соответствие ключа родителя
 int insertElement(Table *table, char *key, char *par, unsigned int info) {
     if (table->c_size >= table->m_size) return 1;
 
     // Проверка на уникальность ключа
-    int i;
-    for (i = 0; i < table->c_size; i++) if (strcmp(table->ks[i].key, key) == 0) return 1;
+    for (int i = 0; i < table->c_size; i++) {
+        if (strcmp(table->ks[i].key, key) == 0) return 1;
+    }
 
     // Проверка соответствия ключа родителя
     if (strcmp(par, "") != 0) {  // Если ключ родителя не пустой
         int found = 0;
-        for (i = 0; i < table->c_size; i++) {
+        for (int i = 0; i < table->c_size; i++) {
             if (strcmp(table->ks[i].key, par) == 0) {
                 found = 1;
                 break;
@@ -73,8 +71,7 @@ int insertElement(Table *table, char *key, char *par, unsigned int info) {
 
 // Удаление элемента по ключу с обновлением ключей родителей
 int deleteElement(Table *table, char *key) {
-    int i;
-    for (i = 0; i < table->c_size; i++) {
+    for (int i = 0; i < table->c_size; i++) {
         if (strcmp(table->ks[i].key, key) == 0) {
             // Удаление элемента
             free(table->ks[i].key);
@@ -92,6 +89,17 @@ int deleteElement(Table *table, char *key) {
     return 1;
 }
 
+// Поиск элемента по ключю
+Table *searchByKey(Table *table, char *key){
+    Table *resultTable = initTable(table->m_size);
+    for (int i = 0; i < table->c_size; i++) {
+        if (strcmp(table->ks[i].key, key) == 0) {
+            insertElement(resultTable, table->ks[i].key, table->ks[i].par, table->ks[i].info);
+        }
+    }
+    return resultTable;
+}
+
 // Поиск всех элементов с заданным значением ключа родителя
 Table *searchByParentKey(Table *table, char *parentKey) {
     Table *resultTable = initTable(table->m_size);
@@ -105,8 +113,7 @@ Table *searchByParentKey(Table *table, char *parentKey) {
 
 // Вывод содержимого таблицы
 void printTable(Table *table) {
-    int i;
-    for (i = 0; i < table->c_size; i++) {
+    for (int i = 0; i < table->c_size; i++) {
         printf("Элемент %d: ключ=%s, родительский ключ=%s\n", i + 1, table->ks[i].key, table->ks[i].par);
     }
 }
@@ -114,8 +121,7 @@ void printTable(Table *table) {
 // Освобождение памяти, выделенной под таблицу
 void freeTable(Table *table) {
     if (table != NULL) {
-        int i;
-        for (i = 0; i < table->c_size; i++) {
+        for (int i = 0; i < table->c_size; i++) {
             free(table->ks[i].key);
             free(table->ks[i].par);
         }

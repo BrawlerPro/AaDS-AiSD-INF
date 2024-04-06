@@ -10,10 +10,10 @@ Queue* createQueue();
 int isEmpty(Queue* queue);
 
 // Добавление элемента в очередь
-int enqueue(Queue* queue, double data);
+int enqueue(Queue* queue, double data, int angle);
 
 // Удаление элемента из очереди
-double dequeue(Queue* queue);
+int dequeue(Queue* queue, double *data, int* angle);
 
 // Удалить Очередь(Распустить Очередь)
 void disperseQueue(Queue* queue);

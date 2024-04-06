@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "table.h"  // Подключаем нашу библиотеку с определениями таблицы
+#include "htable.h"  // Подключаем нашу библиотеку с определениями таблицы
 
 char *readline() {
     char *res = NULL;
@@ -22,10 +22,11 @@ char *readline() {
 
 
 int main() {
+    KeySpace *test = NULL;
     Table *table = NULL;
     int choice, size;
-    char *key, *parentKey;
-    unsigned int info;
+    unsigned int key;
+    char *info, *filename;
 
     printf("Введите начальный размер таблицы: ");
     scanf("%d", &size);
@@ -35,10 +36,11 @@ int main() {
         printf("\nВыберите действие:\n");
         printf("1. Вставить элемент\n");
         printf("2. Удалить элемент\n");
-        printf("3. Найти элементы по ключу родителя\n");
-        printf("4. Найти элементы по ключу\n");
-        printf("5. Вывести содержимое таблицы\n");
-        printf("6. Выход\n");
+        printf("3. Найти элемент по ключу\n");
+        printf("4. Вывести содержимое таблицы\n");
+        printf("5. Импорт таблицы в бинарник\n");
+        printf("6. Экспорт таблицы в бинарник\n");
+        printf("7. Выход\n");
         printf("Выбор: ");
         scanf("%d", &choice);
         getchar();
@@ -46,12 +48,11 @@ int main() {
         switch (choice) {
             case 1:
                 printf("\nВведите ключ: ");
-                key = readline();
-                printf("Введите родительский ключ (или нажмите Enter для пустого ключа): ");
-                parentKey = readline();
+                scanf("%d", &key);
+                getchar();
                 printf("Введите информацию: ");
-                scanf("%u", &info);
-                if (insertElement(table, key, parentKey, info) == 0) {
+                info = readline();
+                if (insertElement(table, key, info) == 0) {
                     printf("Элемент успешно добавлен в таблицу.\n");
                 } else {
                     printf("Ошибка: не удалось добавить элемент в таблицу.\n");
@@ -59,7 +60,8 @@ int main() {
                 break;
             case 2:
                 printf("\nВведите ключ элемента для удаления: ");
-                scanf("%s", key);
+                scanf("%d", &key);
+                getchar();
                 if (deleteElement(table, key) == 0) {
                     printf("Элемент успешно удален из таблицы.\n");
                 } else {
@@ -67,28 +69,30 @@ int main() {
                 }
                 break;
             case 3:
-                printf("\nВведите ключ родителя для поиска элементов: ");
-                parentKey = readline();
-                Table *searchResult = searchByParentKey(table, parentKey);
+                printf("\nВведите ключ для поиска элемента: ");
+                scanf("%d", &key);
+                getchar();
+
                 printf("Результаты поиска:\n");
-                printTable(searchResult);
-                freeTable(searchResult);
+                test = searchElement(table, key);
+
                 break;
             case 4:
-                printf("\nВведите ключ для поиска элементов: ");
-                key = readline();
-                Table *result = searchByKey(table, key);
-                printf("Результаты поиска:\n");
-                printTable(result);
-                freeTable(result);
+                printTable(table);
                 break;
             case 5:
-                printf("\nСодержимое таблицы:\n");
+                printf("\nВведите имя файла:\n");
+                filename = readline();
+                importTable(table, filename);
                 printTable(table);
                 break;
             case 6:
-                printf("\nВыход из программы.\n");
-                freeTable(table);
+                printf("\nВведите имя файла:\n");
+                filename = readline();
+                exportTable(table, filename);
+                printTable(table);
+                break;
+            case 7:
                 return 0;
             default:
                 printf("\nОшибка: неверный выбор. Пожалуйста, выберите действие из списка.\n");

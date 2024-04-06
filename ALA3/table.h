@@ -8,10 +8,17 @@ typedef struct KeySpace KeySpace;
 typedef struct Table Table;
 
 Table *initTable(int m_size);
+
 int insertElement(Table *table, char *key, char *par, unsigned int info);
+
 int deleteElement(Table *table, char *key);
+
+Table *searchByKey(Table *table, char *key);
+
 Table *searchByParentKey(Table *table, char *parentKey);
+
 void printTable(Table *table);
+
 void freeTable(Table *table);
 
 #endif /* TABLE_H */
