@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3.c" "CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o" "gcc" "CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o.d"
-  "/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/table.c" "CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o" "gcc" "CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o.d"
+  "/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/AiSD5.c" "CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.o" "gcc" "CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.o.d"
+  "/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/graph.c" "CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.o" "gcc" "CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.o.d"
   )
 
 # Targets to which this target links.

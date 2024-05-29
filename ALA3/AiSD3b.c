@@ -11,26 +11,24 @@ char *readline() {
     int scan_res = 0;
     while ((scan_res = scanf("%80[^\n]s", buf)) != EOF && scan_res != 0) {
         len += 80;
-        res = (char *)realloc(res, len * sizeof(char *));
+        res = (char *) realloc(res, len * sizeof(char *));
         if (res == NULL) return NULL;
         strncpy(res + len - 81, buf, 80);
     }
-    if (scan_res == 0 && res == NULL) res = (char *)calloc(1, sizeof(char));
+    if (scan_res == 0 && res == NULL) res = (char *) calloc(1, sizeof(char));
     getchar();
     return res;
 }
 
 
 int main() {
-    KeySpace *test = NULL;
+    UsKeySP *test = NULL;
     Table *table = NULL;
-    int choice, size;
+    int choice;
     unsigned int key;
     char *info, *filename;
 
-    printf("Введите начальный размер таблицы: ");
-    scanf("%d", &size);
-    table = initTable(size);
+    table = initTable(3);
 
     while (1) {
         printf("\nВыберите действие:\n");
@@ -57,6 +55,7 @@ int main() {
                 } else {
                     printf("Ошибка: не удалось добавить элемент в таблицу.\n");
                 }
+                free(info);
                 break;
             case 2:
                 printf("\nВведите ключ элемента для удаления: ");
@@ -75,7 +74,9 @@ int main() {
 
                 printf("Результаты поиска:\n");
                 test = searchElement(table, key);
-
+                printf("%d, %s", test->key, test->info);
+                free(test->info);
+                free(test);
                 break;
             case 4:
                 printTable(table);
@@ -83,21 +84,31 @@ int main() {
             case 5:
                 printf("\nВведите имя файла:\n");
                 filename = readline();
-                importTable(table, filename);
-                printTable(table);
+                if (!importTable(table, filename)) {
+
+                    printf("Таблица успешно импортирована\n");
+                    printTable(table);
+                } else {
+                    printf("Ошибка чтения или файла не существует");
+                }
+                free(filename);
                 break;
             case 6:
                 printf("\nВведите имя файла:\n");
                 filename = readline();
-                exportTable(table, filename);
-                printTable(table);
+                if (!exportTable(table, filename)) {
+
+                    printf("Таблица успешно Экспортировалась\n");
+                } else {
+                    printf("Ошибка создания");
+                }
+                free(filename);
                 break;
             case 7:
+                freeTable(table);
                 return 0;
             default:
                 printf("\nОшибка: неверный выбор. Пожалуйста, выберите действие из списка.\n");
         }
     }
-
-    return 0;
 }

@@ -76,10 +76,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/AiSD3b.c">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/AiSD5.c">
 			<Option target="SkibidiToilet"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA3/hash_table.c">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/graph.c">
+			<Option target="SkibidiToilet"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/graph.h">
 			<Option target="SkibidiToilet"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/CMakeLists.txt">

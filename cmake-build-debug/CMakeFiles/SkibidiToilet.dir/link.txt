@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/SkibidiToilet.dir/ALA3/table.c.o CMakeFiles/SkibidiToilet.dir/ALA3/AiSD3.c.o -o SkibidiToilet 
+/usr/bin/cc -g CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.o CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.o -o SkibidiToilet 

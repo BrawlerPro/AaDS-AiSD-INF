@@ -1,120 +1,95 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-
-#define MAX_SIZE 100
-
-
-typedef struct {
-    char data;
-} StackItem;
+#include <string.h>
 
 
-typedef struct {
-    StackItem *items;
-    int top;
+typedef struct TableElement{
+    int key;
+    char* info;
+    struct TableElement* next;
+} TableElement;
+
+typedef struct Table{
+    TableElement **elements;
     int capacity;
-} Stack;
+    int size;
+} Table;
 
-
-Stack* createStack(int capacity) {
-    Stack *stack = (Stack*)malloc(sizeof(Stack));
-    stack->items = (StackItem*)malloc(capacity * sizeof(StackItem));
-    stack->top = -1;
-    stack->capacity = capacity;
-    return stack;
+// Функция хеширования ключа
+int hash(int key, int size) {
+    return key % size;
 }
 
-
-int isEmpty(Stack *stack) {
-    return stack->top == -1;
-}
-
-
-void append(Stack *stack, int value) {
-    if (stack->top == stack->capacity - 1) {
-        printf("Стек переполнен\n");
-        return;
+Table *initTable(int capacity) {
+    Table *table = (Table *) malloc(sizeof(Table));
+    if (table != NULL){
+        table->elements = (TableElement **) malloc(capacity * sizeof(TableElement*));
+        if (table->elements == NULL) {
+            free(table);
+            return NULL;
+        }
+        table->size = 0;
+        table->capacity = capacity;
     }
-    StackItem newItem;
-    newItem.data = value;
-    stack->items[++stack->top] = newItem;
+    return table;
 }
 
 
-int pop(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Стек пуст\n");
-        return -1;
-    }
-    return stack->items[stack->top--].data;
-}
-
-
-char getLastEl(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Стек пуст\n");
-        return -1;
-    }
-    return stack->items[stack->top].data;
-}
-
-
-void freeStack(Stack *stack) {
-    free(stack->items);
-    free(stack);
-}
-
-
-char *readline(const char *prompt) {
-    printf("%s", prompt);
-    char *res = NULL;
-    int len = 1;
-    char buf[101];
-
-    int scan_res = 0;
-    while ((scan_res = scanf("%100[^\n]s", buf)) != EOF && scan_res != 0) {
-        len += 100;
-        res = (char *) realloc(res, len * sizeof(char*));
-        if (res == NULL) return NULL;
-        strncpy(res + len - 101, buf, 100);
-    }
-
-    if (scan_res == 0 && res == NULL) res = (char *) calloc(1, sizeof(char));
-    if (scanf("%*c") == EOF) exit(0);
-    return res;
-}
-
-int main(){
-    char* line = readline(">_");
-    if(line[0] == ']' || line[0] == '>' || line[0] == '}' || line[0] == ')'){
-        printf("0");
-        free(line);
-    }else{
-        Stack* stack = createStack(100);
-        for(int i = 0; i < strlen(line); i++){
-            if(line[i] == '[' || line[i] == '<' || line[i] == '{' || line[i] == '('){
-                append(stack, line[i]);
-            } else{
-                if(line[i] == ')' && getLastEl(stack) == '('){
-                    pop(stack);
-                } else if(line[i] == ']' && getLastEl(stack) == '['){
-                    pop(stack);
-                } else if(line[i] == '}' && getLastEl(stack) == '{'){
-                    pop(stack);
-                } else if(line[i] == '>' && getLastEl(stack) == '<'){
-                    pop(stack);
-                }
+// Функция вставки элемента в таблицу
+int insertElement(Table *table, int key, const char *data) {
+    int index = hash(key, table->capacity);
+    if(table->elements[index] == NULL){
+        TableElement* tmp = (TableElement*) malloc(sizeof(TableElement));
+        tmp->key=key;
+        tmp->info= strdup(data);
+        table->elements[index] = tmp;
+        table->size++;
+        return 0;
+    }else {
+        TableElement* temp = table->elements[index];
+        while (temp != NULL){
+            if(temp->key == key){
+                return 1;
             }
+            temp = temp->next;
         }
-        if(isEmpty(stack)){
-            printf("1");
-            freeStack(stack);
-            free(line);
-        } else{
-            printf("0");
-            freeStack(stack);
-            free(line);
+        TableElement* tmp = (TableElement*) malloc(sizeof(TableElement));
+        tmp->key = key;
+        tmp->info = strdup(data);
+        tmp->next = table->elements[index];
+        table->elements[index] = tmp;
+        table->size++;
+        return 0;
+    }
+}
+
+// Функция удаления элемента из таблицы
+int deleteElement(Table *table, int key) {
+    int index = hash(key, table->capacity);
+    if(table->elements[index] == NULL){
+        return 1;
+    }else {
+        TableElement* temp = table->elements[index];
+        if(temp->key == key){
+            table->elements[index] = temp->next;
+            free(temp->info);
+            free(temp);
+            table->size--;
+            return 0;
+        }else{
+            while (temp != NULL){
+                if(temp->next->key == key){
+                    TableElement *temp1 = temp->next;
+                    free(temp1->info);
+                    temp->next=temp1->next;
+                    free(temp1);
+                    table->size--;
+                    return 0;
+                }
+                temp = temp->next;
+            }
+            return 1;
         }
+
     }
 }
