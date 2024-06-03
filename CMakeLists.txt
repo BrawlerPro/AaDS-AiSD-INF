@@ -32,6 +32,10 @@ add_executable(SkibidiToilet
         ALA5/graph.h
         ALA5/graph.c
         ALA5/AiSD5.c
+        ALA5/queue_priority.c
+        ALA5/queue_prority.h
+        ALA5/from_file.c
+        ALA5/from_file.h
 ) # Пятая лаба
 #find_program(VALGRIND "valgrind")
 #if(VALGRIND)

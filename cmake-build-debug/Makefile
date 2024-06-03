@@ -153,6 +153,30 @@ ALA5/AiSD5.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.s
 .PHONY : ALA5/AiSD5.c.s
 
+ALA5/from_file.o: ALA5/from_file.c.o
+.PHONY : ALA5/from_file.o
+
+# target to build an object file
+ALA5/from_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.o
+.PHONY : ALA5/from_file.c.o
+
+ALA5/from_file.i: ALA5/from_file.c.i
+.PHONY : ALA5/from_file.i
+
+# target to preprocess a source file
+ALA5/from_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.i
+.PHONY : ALA5/from_file.c.i
+
+ALA5/from_file.s: ALA5/from_file.c.s
+.PHONY : ALA5/from_file.s
+
+# target to generate assembly for a file
+ALA5/from_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.s
+.PHONY : ALA5/from_file.c.s
+
 ALA5/graph.o: ALA5/graph.c.o
 .PHONY : ALA5/graph.o
 
@@ -177,6 +201,30 @@ ALA5/graph.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.s
 .PHONY : ALA5/graph.c.s
 
+ALA5/queue_priority.o: ALA5/queue_priority.c.o
+.PHONY : ALA5/queue_priority.o
+
+# target to build an object file
+ALA5/queue_priority.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.o
+.PHONY : ALA5/queue_priority.c.o
+
+ALA5/queue_priority.i: ALA5/queue_priority.c.i
+.PHONY : ALA5/queue_priority.i
+
+# target to preprocess a source file
+ALA5/queue_priority.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.i
+.PHONY : ALA5/queue_priority.c.i
+
+ALA5/queue_priority.s: ALA5/queue_priority.c.s
+.PHONY : ALA5/queue_priority.s
+
+# target to generate assembly for a file
+ALA5/queue_priority.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.s
+.PHONY : ALA5/queue_priority.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +237,15 @@ help:
 	@echo "... ALA5/AiSD5.o"
 	@echo "... ALA5/AiSD5.i"
 	@echo "... ALA5/AiSD5.s"
+	@echo "... ALA5/from_file.o"
+	@echo "... ALA5/from_file.i"
+	@echo "... ALA5/from_file.s"
 	@echo "... ALA5/graph.o"
 	@echo "... ALA5/graph.i"
 	@echo "... ALA5/graph.s"
+	@echo "... ALA5/queue_priority.o"
+	@echo "... ALA5/queue_priority.i"
+	@echo "... ALA5/queue_priority.s"
 .PHONY : help
 
 

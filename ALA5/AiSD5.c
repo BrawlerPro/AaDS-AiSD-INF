@@ -3,6 +3,7 @@
 #include <string.h>
 #include <limits.h>
 #include "graph.h"
+#include "from_file.h"
 
 char* readline() {
     char *res = NULL;
@@ -27,8 +28,8 @@ void print_menu() {
     printf("2. Добавить ребро\n");
     printf("3. Удалить вершину\n");
     printf("4. Удалить ребро\n");
-    printf("5. Обновить вершину\n");
-    printf("6. Обновить ребро\n");
+    printf("5. Считать из файла Вершины\n");
+    printf("6. Считать из файла Рёбра\n");
     printf("7. Вывести граф\n");
     printf("8. Визиаулизировать Граф\n");
     printf("9. Поиск в ширину (BFS)\n");
@@ -52,7 +53,7 @@ RoomType getRoomType() {
 int main() {
     Graph* graph = createGraph();
     int choice = 0;
-    char *id, *src_id, *dest_id;
+    char *id, *src_id, *dest_id, *new_id;
     RoomType type;
     int length, distance;
 
@@ -99,24 +100,16 @@ int main() {
                 free(dest_id);
                 break;
             case 5:
-                printf("Введите ID вершины: ");
+                printf("Введите имя файла: ");
                 id = readline();
-                type = getRoomType();
-                updateVertex(graph, id, type);
+                readVerticesFromFile(graph, id);
                 free(id);
                 break;
             case 6:
-                printf("Введите ID исходной вершины: ");
-                src_id = readline();
-                printf("Введите ID конечной вершины: ");
-                dest_id = readline();
-                printf("Введите новую длину ребра: ");
-                scanf("%d", &length);
-                getchar();
-
-                updateEdge(graph, src_id, dest_id, length);
-                free(src_id);
-                free(dest_id);
+                printf("Введите имя файла: ");
+                id = readline();
+                readEdgesFromFile(graph, id);
+                free(id);
                 break;
             case 7:
                 printGraph(graph);
@@ -129,7 +122,7 @@ int main() {
                 src_id = readline();
                 printf("Введите ID конечной вершины: ");
                 dest_id = readline();
-                if (bfs(graph, src_id, dest_id)) {
+                if (isReachable(graph, src_id, dest_id)) {
                     printf("Путь найден от %s до %s\n", src_id, dest_id);
                 } else {
                     printf("Путь не найден от %s до %s\n", src_id, dest_id);
@@ -142,7 +135,7 @@ int main() {
                 src_id = readline();
                 printf("Введите ID конечной вершины: ");
                 dest_id = readline();
-                distance = dijkstra(graph, src_id, dest_id);
+                distance = shortestPath(graph, src_id, dest_id);
                 if (distance == INT_MAX) {
                     printf("Путь не найден от %s до %s\n", src_id, dest_id);
                 } else {
@@ -154,12 +147,7 @@ int main() {
             case 11:
                 printf("Введите ID начала лабиринта: ");
                 src_id = readline();
-                distance = findNearestExit(graph, src_id);
-                if (distance == -1) {
-                    printf("Путь не найден от %s до, ближайшего выхода не найден, или вы не указади вход\n", src_id);
-                } else {
-                    printf("Кратчайший путь от %s до выхода составляет %d\n", src_id, distance);
-                }
+                findNearestExit(graph, src_id);
                 free(src_id);
             case 12:
                 break;

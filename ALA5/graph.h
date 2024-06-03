@@ -7,16 +7,16 @@ typedef struct Graph Graph;
 
 Graph* createGraph();
 int addVertex(Graph* graph, const char* id, RoomType type);
-int addEdge(Graph* graph, const char* src_id, const char* dest_id, int length);
+int updateVertex(Graph* graph, const char* id, const char *new_id, RoomType new_type);
 int removeVertex(Graph* graph, const char* id);
+int addEdge(Graph* graph, const char* src_id, const char* dest_id, unsigned int length);
+int updateEdge(Graph* graph, const char* src_id, const char* dest_id, unsigned int new_length);
 int removeEdge(Graph* graph, const char* src_id, const char* dest_id);
-int updateVertex(Graph* graph, const char* id, RoomType new_type);
-int updateEdge(Graph* graph, const char* src_id, const char* dest_id, int new_length);
 void printGraph(Graph* graph);
 void visualizeGraph(Graph* graph);
-int bfs(Graph* graph, const char* start_id, const char* end_id);
-int findShortestPath(Graph* graph, const char* start_id, const char* end_id);
-int findNearestExit(Graph* graph, const char* entrance_id);
+int isReachable(Graph* graph, const char* src, const char* dest) ;
+unsigned int shortestPath(Graph* graph, const char* src, const char* dest);
+void findNearestExit(Graph* graph, const char *src);
 void freeGraph(Graph* graph);
 
 #endif //SKIBIDITOILET_GRAPH_H
