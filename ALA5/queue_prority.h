@@ -1,7 +1,7 @@
 #ifndef SKIBIDITOILET_QUEUE_PRORITY_H
 #define SKIBIDITOILET_QUEUE_PRORITY_H
 
-typedef struct {
+typedef struct PriorityQueueNode{
     int vertex;
     unsigned int distance;
 } PriorityQueueNode;

@@ -201,6 +201,30 @@ ALA5/graph.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.s
 .PHONY : ALA5/graph.c.s
 
+ALA5/hash_table.o: ALA5/hash_table.c.o
+.PHONY : ALA5/hash_table.o
+
+# target to build an object file
+ALA5/hash_table.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.o
+.PHONY : ALA5/hash_table.c.o
+
+ALA5/hash_table.i: ALA5/hash_table.c.i
+.PHONY : ALA5/hash_table.i
+
+# target to preprocess a source file
+ALA5/hash_table.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.i
+.PHONY : ALA5/hash_table.c.i
+
+ALA5/hash_table.s: ALA5/hash_table.c.s
+.PHONY : ALA5/hash_table.s
+
+# target to generate assembly for a file
+ALA5/hash_table.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.s
+.PHONY : ALA5/hash_table.c.s
+
 ALA5/queue_priority.o: ALA5/queue_priority.c.o
 .PHONY : ALA5/queue_priority.o
 
@@ -243,6 +267,9 @@ help:
 	@echo "... ALA5/graph.o"
 	@echo "... ALA5/graph.i"
 	@echo "... ALA5/graph.s"
+	@echo "... ALA5/hash_table.o"
+	@echo "... ALA5/hash_table.i"
+	@echo "... ALA5/hash_table.s"
 	@echo "... ALA5/queue_priority.o"
 	@echo "... ALA5/queue_priority.i"
 	@echo "... ALA5/queue_priority.s"

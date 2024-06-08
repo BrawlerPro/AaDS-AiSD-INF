@@ -1,5 +1,6 @@
 #ifndef SKIBIDITOILET_GRAPH_H
 #define SKIBIDITOILET_GRAPH_H
+#include <stdbool.h>
 
 typedef enum RoomType {ENTRANCE, EXIT, TRANSITION} RoomType;
 
@@ -14,9 +15,9 @@ int updateEdge(Graph* graph, const char* src_id, const char* dest_id, unsigned i
 int removeEdge(Graph* graph, const char* src_id, const char* dest_id);
 void printGraph(Graph* graph);
 void visualizeGraph(Graph* graph);
-int isReachable(Graph* graph, const char* src, const char* dest) ;
+int isReachable(Graph* graph, const char* startId, const char* endId) ;
 unsigned int shortestPath(Graph* graph, const char* src, const char* dest);
-void findNearestExit(Graph* graph, const char *src);
+unsigned int findNearestExit(Graph* graph, const char *src);
 void freeGraph(Graph* graph);
 
 #endif //SKIBIDITOILET_GRAPH_H

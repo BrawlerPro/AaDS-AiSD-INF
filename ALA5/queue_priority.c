@@ -5,7 +5,7 @@
 
 // Структура элемента очереди с приоритетами
 typedef struct PriorityQueueNode{
-    int vertex;
+    unsigned int vertex;
     unsigned int distance;
 } PriorityQueueNode;
 
@@ -56,7 +56,7 @@ void heapifyDown(PriorityQueue* pq, int index) {
     }
 }
 
-void push(PriorityQueue* pq, int vertex, unsigned int distance) {
+void push(PriorityQueue* pq, unsigned int vertex, unsigned int distance) {
     if (pq->size >= pq->capacity) return;
     pq->nodes[pq->size].vertex = vertex;
     pq->nodes[pq->size].distance = distance;

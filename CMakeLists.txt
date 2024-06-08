@@ -36,6 +36,7 @@ add_executable(SkibidiToilet
         ALA5/queue_prority.h
         ALA5/from_file.c
         ALA5/from_file.h
+        ALA5/hash_table.c
 ) # Пятая лаба
 #find_program(VALGRIND "valgrind")
 #if(VALGRIND)
