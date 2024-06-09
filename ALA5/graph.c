@@ -286,16 +286,20 @@ int getVertexIndex(Table* table, const char* id) {
     return -1;
 }
 
-unsigned int** floydWarshall(Graph* graph) {
+unsigned int** floydWarshall(Graph* graph, int*** next) {
     int size = getCapacity(graph->vertices);
     unsigned int** dist = (unsigned int**)malloc(size * sizeof(unsigned int*));
+    *next = (int**)malloc(size * sizeof(int*));
     for (int i = 0; i < size; i++) {
         dist[i] = (unsigned int*)malloc(size * sizeof(unsigned int));
+        (*next)[i] = (int*)malloc(size * sizeof(int));
         for (int j = 0; j < size; j++) {
             if (i == j) {
                 dist[i][j] = 0;
+                (*next)[i][j] = -1;
             } else {
                 dist[i][j] = UINT_MAX;
+                (*next)[i][j] = -1;
             }
         }
     }
@@ -307,6 +311,7 @@ unsigned int** floydWarshall(Graph* graph) {
                 int j = getVertexIndex(graph->vertices, edge->to->id);
                 if (j != -1) {
                     dist[i][j] = edge->distance;
+                    (*next)[i][j] = j;
                 }
                 edge = edge->next;
             }
@@ -319,6 +324,7 @@ unsigned int** floydWarshall(Graph* graph) {
                 if (dist[i][k] != UINT_MAX && dist[k][j] != UINT_MAX &&
                     dist[i][k] + dist[k][j] < dist[i][j]) {
                     dist[i][j] = dist[i][k] + dist[k][j];
+                    (*next)[i][j] = (*next)[i][k];
                 }
             }
         }
@@ -327,18 +333,6 @@ unsigned int** floydWarshall(Graph* graph) {
     return dist;
 }
 
-void printPath(int** next, int u, int v) {
-    if (next[u][v] == -1) {
-        printf("No path\n");
-        return;
-    }
-    printf("Path: ");
-    while (u != v) {
-        printf("%d -> ", u);
-        u = next[u][v];
-    }
-    printf("%d\n", v);
-}
 
 unsigned int findNearestExit(Graph* graph, const char *src) {
     int start = getVertexIndex(graph->vertices, src);
@@ -348,7 +342,7 @@ unsigned int findNearestExit(Graph* graph, const char *src) {
     }
 
     int** next;
-    unsigned int** dist = floydWarshall(graph);
+    unsigned int** dist = floydWarshall(graph, &next);
 
     unsigned int minDist = UINT_MAX;
     int exitIndex = -1;
@@ -363,7 +357,17 @@ unsigned int findNearestExit(Graph* graph, const char *src) {
 
     if (exitIndex != -1) {
         printf("The nearest exit distance from vertex %s is: %u\n", src, minDist);
-        printPath(next, start, exitIndex);
+        int u = start;
+        int v =exitIndex;
+        if (next[u][v] == -1) {
+            printf("No path\n");
+        }
+        printf("Path: %s", graph->vertices->ks[u].info.id);
+        while (u != v) {
+            u = next[u][v];
+            printf(" -> %s", graph->vertices->ks[u].info.id);
+        }
+        printf("\n");
     } else {
         printf("No exit found from vertex %s\n", src);
     }
@@ -377,7 +381,6 @@ unsigned int findNearestExit(Graph* graph, const char *src) {
 
     return minDist;
 }
-
 
 
 void freeGraph(Graph* graph) {
