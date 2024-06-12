@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
-#include <stdbool.h>
 #include "graph.h"
 #include "queue_prority.h"
 #include "htable.h"
@@ -337,7 +336,7 @@ unsigned int** floydWarshall(Graph* graph, int*** next) {
 unsigned int findNearestExit(Graph* graph, const char *src) {
     int start = getVertexIndex(graph->vertices, src);
     if (start == -1) {
-        printf("Source vertex not found\n");
+        printf("Исходная вершина не найдена\n");
         return UINT_MAX;
     }
 
@@ -356,7 +355,7 @@ unsigned int findNearestExit(Graph* graph, const char *src) {
     }
 
     if (exitIndex != -1) {
-        printf("The nearest exit distance from vertex %s is: %u\n", src, minDist);
+        printf("Ближайшее расстояние до выхода из вершины %s равно: %u\n", src, minDist);
         int u = start;
         int v =exitIndex;
         if (next[u][v] == -1) {
@@ -369,7 +368,7 @@ unsigned int findNearestExit(Graph* graph, const char *src) {
         }
         printf("\n");
     } else {
-        printf("No exit found from vertex %s\n", src);
+        printf("Не найден выход из вершины %s\n", src);
     }
 
     for (int i = 0; i < getCapacity(graph->vertices); i++) {

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "ffile.h"
-#include "bitree.h"
+#include "B_tree.h"
 
 char* randomString(int minLength, int maxLength) {
     int length = minLength + rand() % (maxLength - minLength + 1);
@@ -10,7 +10,7 @@ char* randomString(int minLength, int maxLength) {
 
     if (str == NULL) return NULL;
 
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const char charset[] = "abcdefghijkl";
     int charsetSize = sizeof(charset) - 1;
 
     for (int i = 0; i < length; ++i) {
@@ -26,7 +26,7 @@ char** createRandomStrings(unsigned int size){
     char** strings = (char**) malloc(sizeof(char*) * size);
 
     for(int i = 0; i < size; i++){
-        strings[i] = randomString(5, 20);
+        strings[i] = randomString(5, 5);
     }
     return strings;
 }
@@ -49,7 +49,7 @@ void insertRandomString(Tree* tree, unsigned int size) {
 
     start = clock();
     for(int i = 0; i < size; i++) {
-        insertNode(tree, strings[i], 0);
+        insert(tree, strings[i], 0);
     }
     end = clock();
 
@@ -67,7 +67,7 @@ void deleteRandomString(Tree* tree, unsigned int size) {
 
     start = clock();
     for(int i = 0; i < size; i++) {
-        deleteNode(tree, strings[i]);
+        delete(tree, strings[i]);
     }
     end = clock();
 
@@ -83,9 +83,10 @@ void searchRandomNode(Tree* tree, unsigned int size) {
 
     char** strings = createRandomStrings(size);
 
+
     start = clock();
     for(int i = 0; i < size; i++) {
-        searchNode(tree, strings[i]);
+        search(tree, strings[i]);
     }
     end = clock();
 

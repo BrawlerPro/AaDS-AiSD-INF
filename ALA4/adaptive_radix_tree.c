@@ -256,14 +256,14 @@ int find_child_index(node_base* node, node_base* child) {
     return -1;
 }
 
-// Полная функция удаления
+
 void delete(Tree* tree, const char* key) {
     node_search_result result = find_node_and_parent(tree, key);
     node_base* target = result.node;
     node_base* parent = result.parent;
 
     if (target == NULL || target->node_type != LEAF) {
-        return; // Ключ не найден или целевой узел не является листом
+        return;
     }
 
     leaf* target_leaf = (leaf*)target;

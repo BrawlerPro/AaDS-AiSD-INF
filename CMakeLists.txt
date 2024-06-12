@@ -29,15 +29,23 @@ set(CMAKE_C_STANDARD 99)
 #        ALA4/from_file.c
 #) # Четвёртая Лаба A
 add_executable(SkibidiToilet
-        ALA5/graph.h
-        ALA5/graph.c
-        ALA5/AiSD5.c
-        ALA5/queue_priority.c
-        ALA5/queue_prority.h
-        ALA5/from_file.c
-        ALA5/from_file.h
-        ALA5/hash_table.c
-) # Пятая лаба
+        ALA4/B_tree.h
+        ALA4/ffile.h
+        ALA4/B_tree.c
+        ALA4/from_file.c
+        ALA4/AiSD4b.c
+) # Четвёртая Лаба B
+#add_executable(SkibidiToilet
+#        ALA5/graph.h
+#        ALA5/htable.h
+#        ALA5/queue_prority.h
+#        ALA5/from_file.h
+#        ALA5/hash_table.c
+#        ALA5/queue_priority.c
+#        ALA5/from_file.c
+#        ALA5/graph.c
+#        ALA5/AiSD5.c
+#) # Пятая лаба
 #find_program(VALGRIND "valgrind")
 #if(VALGRIND)
 #    add_custom_target(valgrind COMMAND "${VALGRIND}" --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes)

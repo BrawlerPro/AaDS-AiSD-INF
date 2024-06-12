@@ -129,125 +129,77 @@ SkibidiToilet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/build
 .PHONY : SkibidiToilet/fast
 
-ALA5/AiSD5.o: ALA5/AiSD5.c.o
-.PHONY : ALA5/AiSD5.o
+ALA4/AiSD4b.o: ALA4/AiSD4b.c.o
+.PHONY : ALA4/AiSD4b.o
 
 # target to build an object file
-ALA5/AiSD5.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.o
-.PHONY : ALA5/AiSD5.c.o
+ALA4/AiSD4b.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/AiSD4b.c.o
+.PHONY : ALA4/AiSD4b.c.o
 
-ALA5/AiSD5.i: ALA5/AiSD5.c.i
-.PHONY : ALA5/AiSD5.i
+ALA4/AiSD4b.i: ALA4/AiSD4b.c.i
+.PHONY : ALA4/AiSD4b.i
 
 # target to preprocess a source file
-ALA5/AiSD5.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.i
-.PHONY : ALA5/AiSD5.c.i
+ALA4/AiSD4b.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/AiSD4b.c.i
+.PHONY : ALA4/AiSD4b.c.i
 
-ALA5/AiSD5.s: ALA5/AiSD5.c.s
-.PHONY : ALA5/AiSD5.s
+ALA4/AiSD4b.s: ALA4/AiSD4b.c.s
+.PHONY : ALA4/AiSD4b.s
 
 # target to generate assembly for a file
-ALA5/AiSD5.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/AiSD5.c.s
-.PHONY : ALA5/AiSD5.c.s
+ALA4/AiSD4b.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/AiSD4b.c.s
+.PHONY : ALA4/AiSD4b.c.s
 
-ALA5/from_file.o: ALA5/from_file.c.o
-.PHONY : ALA5/from_file.o
+ALA4/B_tree.o: ALA4/B_tree.c.o
+.PHONY : ALA4/B_tree.o
 
 # target to build an object file
-ALA5/from_file.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.o
-.PHONY : ALA5/from_file.c.o
+ALA4/B_tree.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/B_tree.c.o
+.PHONY : ALA4/B_tree.c.o
 
-ALA5/from_file.i: ALA5/from_file.c.i
-.PHONY : ALA5/from_file.i
+ALA4/B_tree.i: ALA4/B_tree.c.i
+.PHONY : ALA4/B_tree.i
 
 # target to preprocess a source file
-ALA5/from_file.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.i
-.PHONY : ALA5/from_file.c.i
+ALA4/B_tree.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/B_tree.c.i
+.PHONY : ALA4/B_tree.c.i
 
-ALA5/from_file.s: ALA5/from_file.c.s
-.PHONY : ALA5/from_file.s
+ALA4/B_tree.s: ALA4/B_tree.c.s
+.PHONY : ALA4/B_tree.s
 
 # target to generate assembly for a file
-ALA5/from_file.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/from_file.c.s
-.PHONY : ALA5/from_file.c.s
+ALA4/B_tree.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/B_tree.c.s
+.PHONY : ALA4/B_tree.c.s
 
-ALA5/graph.o: ALA5/graph.c.o
-.PHONY : ALA5/graph.o
+ALA4/from_file.o: ALA4/from_file.c.o
+.PHONY : ALA4/from_file.o
 
 # target to build an object file
-ALA5/graph.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.o
-.PHONY : ALA5/graph.c.o
+ALA4/from_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/from_file.c.o
+.PHONY : ALA4/from_file.c.o
 
-ALA5/graph.i: ALA5/graph.c.i
-.PHONY : ALA5/graph.i
-
-# target to preprocess a source file
-ALA5/graph.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.i
-.PHONY : ALA5/graph.c.i
-
-ALA5/graph.s: ALA5/graph.c.s
-.PHONY : ALA5/graph.s
-
-# target to generate assembly for a file
-ALA5/graph.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/graph.c.s
-.PHONY : ALA5/graph.c.s
-
-ALA5/hash_table.o: ALA5/hash_table.c.o
-.PHONY : ALA5/hash_table.o
-
-# target to build an object file
-ALA5/hash_table.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.o
-.PHONY : ALA5/hash_table.c.o
-
-ALA5/hash_table.i: ALA5/hash_table.c.i
-.PHONY : ALA5/hash_table.i
+ALA4/from_file.i: ALA4/from_file.c.i
+.PHONY : ALA4/from_file.i
 
 # target to preprocess a source file
-ALA5/hash_table.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.i
-.PHONY : ALA5/hash_table.c.i
+ALA4/from_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/from_file.c.i
+.PHONY : ALA4/from_file.c.i
 
-ALA5/hash_table.s: ALA5/hash_table.c.s
-.PHONY : ALA5/hash_table.s
-
-# target to generate assembly for a file
-ALA5/hash_table.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/hash_table.c.s
-.PHONY : ALA5/hash_table.c.s
-
-ALA5/queue_priority.o: ALA5/queue_priority.c.o
-.PHONY : ALA5/queue_priority.o
-
-# target to build an object file
-ALA5/queue_priority.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.o
-.PHONY : ALA5/queue_priority.c.o
-
-ALA5/queue_priority.i: ALA5/queue_priority.c.i
-.PHONY : ALA5/queue_priority.i
-
-# target to preprocess a source file
-ALA5/queue_priority.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.i
-.PHONY : ALA5/queue_priority.c.i
-
-ALA5/queue_priority.s: ALA5/queue_priority.c.s
-.PHONY : ALA5/queue_priority.s
+ALA4/from_file.s: ALA4/from_file.c.s
+.PHONY : ALA4/from_file.s
 
 # target to generate assembly for a file
-ALA5/queue_priority.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA5/queue_priority.c.s
-.PHONY : ALA5/queue_priority.c.s
+ALA4/from_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SkibidiToilet.dir/build.make CMakeFiles/SkibidiToilet.dir/ALA4/from_file.c.s
+.PHONY : ALA4/from_file.c.s
 
 # Help Target
 help:
@@ -258,21 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SkibidiToilet"
-	@echo "... ALA5/AiSD5.o"
-	@echo "... ALA5/AiSD5.i"
-	@echo "... ALA5/AiSD5.s"
-	@echo "... ALA5/from_file.o"
-	@echo "... ALA5/from_file.i"
-	@echo "... ALA5/from_file.s"
-	@echo "... ALA5/graph.o"
-	@echo "... ALA5/graph.i"
-	@echo "... ALA5/graph.s"
-	@echo "... ALA5/hash_table.o"
-	@echo "... ALA5/hash_table.i"
-	@echo "... ALA5/hash_table.s"
-	@echo "... ALA5/queue_priority.o"
-	@echo "... ALA5/queue_priority.i"
-	@echo "... ALA5/queue_priority.s"
+	@echo "... ALA4/AiSD4b.o"
+	@echo "... ALA4/AiSD4b.i"
+	@echo "... ALA4/AiSD4b.s"
+	@echo "... ALA4/B_tree.o"
+	@echo "... ALA4/B_tree.i"
+	@echo "... ALA4/B_tree.s"
+	@echo "... ALA4/from_file.o"
+	@echo "... ALA4/from_file.i"
+	@echo "... ALA4/from_file.s"
 .PHONY : help
 
 

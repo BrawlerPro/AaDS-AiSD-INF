@@ -76,28 +76,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/AiSD5.c">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA4/AiSD4b.c">
 			<Option target="SkibidiToilet"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/from_file.c">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA4/B_tree.c">
 			<Option target="SkibidiToilet"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/from_file.h">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA4/B_tree.h">
 			<Option target="SkibidiToilet"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/graph.c">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA4/ffile.h">
 			<Option target="SkibidiToilet"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/graph.h">
-			<Option target="SkibidiToilet"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/hash_table.c">
-			<Option target="SkibidiToilet"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/queue_priority.c">
-			<Option target="SkibidiToilet"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA5/queue_prority.h">
+		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/ALA4/from_file.c">
 			<Option target="SkibidiToilet"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/CMakeLists.txt">
