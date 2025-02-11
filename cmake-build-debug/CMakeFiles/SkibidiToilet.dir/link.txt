@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/SkibidiToilet.dir/ALA4/B_tree.c.o CMakeFiles/SkibidiToilet.dir/ALA4/from_file.c.o CMakeFiles/SkibidiToilet.dir/ALA4/AiSD4b.c.o -o SkibidiToilet 

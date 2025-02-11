@@ -1,3 +1,0 @@
-/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles/SkibidiToilet.dir
-/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/rasul/CLionProjects/SkibidiToilet/cmake-build-debug/CMakeFiles/rebuild_cache.dir
